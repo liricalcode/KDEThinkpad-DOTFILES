@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Set Desktop Names
+Exec=bash -c "$HOME/.config/autostart-scripts/set-desktop-names.sh"
+X-KDE-autostart-phase=1
+Hidden=false
+NoDisplay=true

@@ -1,0 +1,14 @@
+configuration {
+    modes:               "drun,filebrowser";
+    display-drun:        "APPS";
+    display-filebrowser: "FILES";
+    drun-display-format: "{name}";
+    show-icons:          true;
+    icon-theme:          "Papirus-Dark";
+    drun-match-fields:   "name,exec,categories";
+    case-sensitive:      false;
+    cycle:               true;
+    normalize-match:     true;
+}
+
+@theme "$HOME/.config/rofi/themes/e595.rasi"
