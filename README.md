@@ -9,7 +9,7 @@
   <img src="screenshots/rice4.png" width="49%"/>
 </p>
 
-> Personal dotfiles for quick setup on a fresh machine. Some configs may be edited versions of others' work — attribution will be added where I can track it down.
+> Personal dotfiles for quick setup on a fresh machine. Some configs may be edited versions of others' work credit will be added where I can track it down.
 
 > ⚠️ **Heads up:** This is tailored to my specific setup. Just grab what you need and place the files manually — check [PACKAGES.md](PACKAGES.md) for required programs.
 
@@ -48,7 +48,7 @@
 - Custom `e595.rasi` theme (add to `~/.config/rofi/themes/`)
 
 ### Fastfetch
-- Custom logo, red accent keys, compact layout
+- minimal, red accent keys, compact layout
 
 ### KDE
 - Desktop workspace names set via autostart script on login
@@ -98,3 +98,4 @@ chmod +x ~/.config/autostart-scripts/set-desktop-names.sh
 
 - Fonts with Nerd Font symbols are required for `eza` icons and KDE desktop name glyphs
 - The rofi config references a custom theme at `~/.config/rofi/themes/e595.rasi` — grab it from `rofi/themes/`
+- you can download variety for auto changing wallpaper
