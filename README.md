@@ -1,4 +1,4 @@
-# 🖤 dotfiles
+# ❤️ dotfiles ⚙️
 
 <p align="center">
   <img src="screenshots/rice1.png" width="49%"/>
