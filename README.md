@@ -98,5 +98,5 @@ chmod +x ~/.config/autostart-scripts/set-desktop-names.sh
 
 - Fonts with Nerd Font symbols are required for `eza` icons and KDE desktop name glyphs
 - The rofi config references a custom theme at `~/.config/rofi/themes/e595.rasi` — grab it from `rofi/themes/`
-- you can download variety for auto changing wallpaper
-- the panel colorizer was also used
+- you can install variety for auto changing wallpaper[https://github.com/varietywalls/variety]
+- the panel colorizer was also used [https://store.kde.org/p/2130967/]
