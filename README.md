@@ -19,7 +19,6 @@
 
 | File | Destination |
 |------|-------------|
-| `zsh/.zshrc` | `~/.zshrc` |
 | `kitty/kitty.conf` | `~/.config/kitty/kitty.conf` |
 | `rofi/config.rasi` | `~/.config/rofi/config.rasi` |
 | `rofi/themes/e595.rasi` | `~/.config/rofi/themes/e595.rasi` |
@@ -31,12 +30,6 @@
 ---
 
 ## ⚙️ What's included
-
-### Zsh
-- Starship prompt
-- CLI replacements: `eza`, `bat`, `ripgrep`, `fd`, `fzf`, `zoxide`, `btop`, `dust`, `delta`
-- Fuzzy git log browser (`fshow`), content search (`rgs`), smart Ctrl+Z
-- Full completion system with caching and typo correction
 
 ### Kitty
 - TrackPoint red accent color scheme
@@ -96,7 +89,7 @@ chmod +x ~/.config/autostart-scripts/set-desktop-names.sh
 
 ## 📋 Notes
 
-- Fonts with Nerd Font symbols are required for `eza` icons and KDE desktop name glyphs
+- Fonts with Nerd Font symbols are required for KDE desktop name glyphs
 - The rofi config references a custom theme at `~/.config/rofi/themes/e595.rasi` — grab it from `rofi/themes/`
 - you can install variety for auto changing wallpaper[https://github.com/varietywalls/variety]
 - the panel colorizer was also used [https://store.kde.org/p/2130967/]
