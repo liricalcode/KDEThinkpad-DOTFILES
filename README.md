@@ -34,7 +34,7 @@
 
 ### Zsh
 - Starship prompt
-- Modern CLI replacements: `eza`, `bat`, `ripgrep`, `fd`, `fzf`, `zoxide`, `btop`, `dust`, `delta`
+- CLI replacements: `eza`, `bat`, `ripgrep`, `fd`, `fzf`, `zoxide`, `btop`, `dust`, `delta`
 - Fuzzy git log browser (`fshow`), content search (`rgs`), smart Ctrl+Z
 - Full completion system with caching and typo correction
 
@@ -99,3 +99,4 @@ chmod +x ~/.config/autostart-scripts/set-desktop-names.sh
 - Fonts with Nerd Font symbols are required for `eza` icons and KDE desktop name glyphs
 - The rofi config references a custom theme at `~/.config/rofi/themes/e595.rasi` — grab it from `rofi/themes/`
 - you can download variety for auto changing wallpaper
+- the panel colorizer was also used
