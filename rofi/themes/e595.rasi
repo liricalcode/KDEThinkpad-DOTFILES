@@ -1,0 +1,269 @@
+/**
+ * ThinkPad E595 — Rofi Launcher
+ * Based on adi1090x/rofi type-7 style-7
+ *
+ * ┌─────────────────────────────────────┐
+ * │  COLORS — edit this block to retheme │
+ * └─────────────────────────────────────┘
+ */
+
+/*****----- Colors -----*****/
+* {
+    bg0:      #0a0a0a;    /* void black        */
+    bg1:      #111111;    /* base              */
+    bg2:      #1a1a1a;    /* surface / rows    */
+    bg3:      #222222;    /* elevated          */
+
+    fg0:      #e8e8e8;    /* primary text      */
+    fg1:      #888888;    /* dim text          */
+    fg2:      #3a3a3a;    /* ghost/placeholder */
+
+    red:      #e8001c;    /* accent            */
+    redm:     #7a0010;    /* muted accent      */
+    green:    #00e57a;    /* positive          */
+    amber:    #ffb300;    /* urgent/warn       */
+    blue:     #4da6ff;    /* active/info       */
+
+    /* rofi internals */
+    background-color: transparent;
+    text-color:       #e8e8e8;
+    border-color:     #2a2a2a;
+    spacing:          0;
+    padding:          0;
+    margin:           0;
+}
+
+/*****----- Window -----*****/
+window {
+    transparency:     "real";
+    location:         center;
+    anchor:           center;
+    fullscreen:       false;
+    width:            480px;
+    x-offset:         0px;
+    y-offset:         0px;
+    enabled:          true;
+    border-radius:    0px;
+    border:           1px solid;
+    border-color:     #e8001c;
+    background-color: #111111;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:          true;
+    spacing:          0px;
+    background-color: transparent;
+    orientation:      vertical;
+    children:         [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:          0px;
+    padding:          0px;
+    background-color: transparent;
+    orientation:      vertical;
+    children:         [ "mode-switcher", "listview" ];
+}
+
+/*****----- Inputbar + Banner -----*****
+ *
+ * CHANGE BANNER:
+ *   Replace the path in background-image below.
+ *   Make the image the same height as padding-top (195px)
+ *   to avoid tiling. Recommended size: 480 x 220 px
+ *
+ ***************************************/
+inputbar {
+    enabled:          true;
+    spacing:          0px;
+    padding:          195px 14px 12px 14px;
+    background-color: #0a0a0a;
+    background-image: url("/home/0xLyric/.config/rofi/banner.png", width);
+    border:           0px 0px 1px 0px solid;
+    border-color:     #e8001c;
+    orientation:      horizontal;
+    children:         [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:          true;
+    expand:           false;
+    str:              "❯";
+    padding:          8px 10px;
+    border-radius:    0px;
+    background-color: #1a1a1a;
+    text-color:       #e8001c;
+    font:             "JetBrains Mono Bold 12";
+}
+
+entry {
+    enabled:          true;
+    expand:           true;
+    padding:          8px 12px;
+    border-radius:    0px;
+    background-color: #1a1a1a;
+    text-color:       #e8e8e8;
+    font:             "JetBrains Mono 11";
+    cursor:           text;
+    placeholder:      "search...";
+    placeholder-color: #3a3a3a;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher {
+    enabled:          true;
+    spacing:          0px;
+    background-color: #0a0a0a;
+    border:           0px 0px 1px 0px solid;
+    border-color:     #2a2a2a;
+}
+
+button {
+    padding:          9px 0px;
+    border-radius:    0px;
+    border:           0px;
+    background-color: #0a0a0a;
+    text-color:       #888888;
+    font:             "JetBrains Mono Bold 10";
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+
+/* Full background highlight on selected tab */
+button selected {
+    background-color: #e8001c;
+    text-color:       #ffffff;
+    border:           0px;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:          true;
+    columns:          1;
+    lines:            7;
+    cycle:            true;
+    dynamic:          true;
+    scrollbar:        true;
+    layout:           vertical;
+    fixed-height:     true;
+    fixed-columns:    true;
+    spacing:          0px;
+    padding:          4px 0px;
+    background-color: #111111;
+}
+
+scrollbar {
+    width:            3px;
+    border:           0px;
+    background-color: #1a1a1a;
+    handle-color:     #7a0010;
+    handle-width:     3px;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:          true;
+    spacing:          12px;
+    padding:          9px 14px;
+    border-radius:    0px;
+    border:           0px 0px 0px 3px solid;
+    border-color:     transparent;
+    background-color: transparent;
+    text-color:       #e8e8e8;
+    children:         [ "element-icon", "element-text" ];
+}
+
+element normal normal {
+    background-color: transparent;
+    text-color:       #e8e8e8;
+    border-color:     transparent;
+}
+
+element normal urgent {
+    background-color: transparent;
+    text-color:       #ffb300;
+    border-color:     transparent;
+}
+
+element normal active {
+    background-color: transparent;
+    text-color:       #4da6ff;
+    border-color:     transparent;
+}
+
+element selected normal {
+    background-color: #1a1a1a;
+    text-color:       #e8e8e8;
+    border-color:     #e8001c;
+}
+
+element selected urgent {
+    background-color: #1a1a1a;
+    text-color:       #ffb300;
+    border-color:     #ffb300;
+}
+
+element selected active {
+    background-color: #1a1a1a;
+    text-color:       #4da6ff;
+    border-color:     #4da6ff;
+}
+
+element alternate normal {
+    background-color: #0a0a0a;
+    text-color:       #e8e8e8;
+    border-color:     transparent;
+}
+
+element alternate urgent {
+    background-color: #0a0a0a;
+    text-color:       #ffb300;
+    border-color:     transparent;
+}
+
+element alternate active {
+    background-color: #0a0a0a;
+    text-color:       #4da6ff;
+    border-color:     transparent;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+    size:             24px;
+    vertical-align:   0.5;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "JetBrains Mono 10";
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+    highlight:        bold #e8001c;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color: #0a0a0a;
+    border:           1px 0px 0px 0px solid;
+    border-color:     #2a2a2a;
+}
+
+textbox {
+    padding:          8px 14px;
+    border-radius:    0px;
+    background-color: transparent;
+    text-color:       #888888;
+    font:             "JetBrains Mono 9";
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+}
+
+error-message {
+    padding:          14px;
+    border-radius:    0px;
+    background-color: #111111;
+    text-color:       #e8e8e8;
+}
